@@ -4,43 +4,55 @@ using UnityEngine;
 
 public class Playermov : MonoBehaviour
 {
-    private float rotationSpeed = 85f;
+    public float rotationSpeed = 120f;
     //public CharacterController player;
-    public float horizontalMove;
-    public float verticalMove;
-    public float rotationY;
-    public float playerSpeed = 3;
-    private Rigidbody physicsBody;
-    private float jumpForce;
+    private float horizontalMove;
+    private float verticalMove;
+    private float rotationY;
+    private float rotationX;
+    public float playerSpeed = 10;
+    private Camera camara;
+    //private int jumpsLimit;
+    //public int jumpsCant;
+    //private bool isJumping;
+    
+    
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         //player = GetComponent<CharacterController>();
-        jumpForce = 5f;
-        physicsBody = GetComponent<Rigidbody>();
+        //jumpForce = 400f;
+        //jumpsCant = 0;
+        //jumpsLimit = 1;
+        //isJumping = false;
+        //canJump = true;
+        
+        camara = GetComponentInChildren<Camera>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         horizontalMove = Input.GetAxis("Horizontal");
         verticalMove = Input.GetAxis("Vertical");
-        rotationY = Input.GetAxis("Mouse X");
-        //player.Move(new Vector3(horizontalMove, 0, verticalMove) * playerSpeed * Time.deltaTime);
+        rotationX = Input.GetAxis("Mouse X");
+        rotationY = Input.GetAxis("Mouse Y");
         transform.Translate(new Vector3 (horizontalMove,0f,verticalMove) * playerSpeed * Time.deltaTime);
-        //transform.Translate(0, 0, Input.GetAxis("Vertical") * playerSpeed * Time.deltaTime);
-        //float mouseX = Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
-        transform.Rotate(new Vector3 (0f, rotationY, 0f) * rotationSpeed * Time.deltaTime);
-
-        //salto
-        if (Input.GetKeyDown(KeyCode.Space))
+        transform.Rotate(new Vector3(0, rotationX, 0f) * rotationSpeed * Time.deltaTime);
+        camara.transform.Rotate(new Vector3(-rotationY, 0, 0f) * rotationSpeed * Time.deltaTime);
+        /*if (jumpsCant > jumpsLimit)
         {
-            Debug.Log("salto");
-            physicsBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            
+            canJump = false;
+            jumpsCant = 0;
         }
+        if (jumpsCant <= jumpsLimit)
+        {
+            canJump = true;
+        }*/
 
     }
+
     
 }
