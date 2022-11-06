@@ -28,7 +28,7 @@ public class PickAbleObject : MonoBehaviour
     {
         if (other.tag == "PlayerInteractionZone")
         {
-            other.GetComponentInParent<PickUpObject>().ObjectToPickUp = this.gameObject;
+            other.GetComponentInParent<PickUpObject>().ObjectToPickUp = null;
         }
     }
 }

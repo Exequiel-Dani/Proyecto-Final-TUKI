@@ -6,7 +6,7 @@ public class DetectarEnemigo : MonoBehaviour
 {
     public Transform enemigo;
     public Transform player;
-    public float velocidadMovimiento;
+    public float velocidadMovimiento = 4f;
     public bool activado;
     private Vector3 playerPosition;
     public GameObject BalaInicio;
@@ -14,7 +14,7 @@ public class DetectarEnemigo : MonoBehaviour
     public float BalaVelocidad;
     public Vector3 UbicacionInicial;
     public Quaternion RotacionInicial;
-    public float speed = 2;
+    //public float speed = 2;
     public EnemyPatrol enemyPatrol;
 
     private void Start()
@@ -80,6 +80,7 @@ public class DetectarEnemigo : MonoBehaviour
         {
             Invoke("RegresarRotacion",0);
             enemyPatrol.enabled = true;
+            enemyPatrol.StartCoroutine("RealizarPatrullaje");
             //enemigo.transform.position += new Vector3(0, 0, speed * Time.deltaTime);
             //if (transform.position.z > 10 )//|| transform.position.z < -10)
             //{ speed *= -1; }
