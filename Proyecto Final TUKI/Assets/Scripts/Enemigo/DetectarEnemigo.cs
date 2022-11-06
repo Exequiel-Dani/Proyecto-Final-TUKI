@@ -27,11 +27,11 @@ public class DetectarEnemigo : MonoBehaviour
     private void Update()
     {
         
-        playerPosition = new Vector3(player.position.x, enemigo.position.y, player.position.z);
+        playerPosition = new Vector3(player.position.x, enemigo.position.y, player.position.z - 7);
         if (activado == true)
         {
             enemigo.transform.position = Vector3.MoveTowards(transform.position, playerPosition, velocidadMovimiento * Time.deltaTime);
-            enemigo.transform.LookAt(playerPosition);
+            enemigo.transform.LookAt(player);
             
 
         }
