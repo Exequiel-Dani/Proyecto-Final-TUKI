@@ -9,6 +9,7 @@ TagManager:
   - Bala
   - Llave
   - Premio
+  - PuntosDePatrullaje
   layers:
   - Default
   - TransparentFX
