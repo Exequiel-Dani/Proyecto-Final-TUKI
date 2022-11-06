@@ -75,7 +75,6 @@ GameObject:
   - component: {fileID: 4585480930063885882}
   - component: {fileID: 3123065914665832063}
   - component: {fileID: 544627830741902283}
-  - component: {fileID: 5280946060344438912}
   m_Layer: 0
   m_Name: gafas
   m_TagString: Untagged
@@ -148,19 +147,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5280946060344438912
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 382676373596231467}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &647243011663652474
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,7 +652,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 24.72
+  m_Radius: 10
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1580553490312194285
 GameObject:
@@ -1518,7 +1504,6 @@ GameObject:
   - component: {fileID: 7951904115182828110}
   - component: {fileID: 3480587108562840513}
   - component: {fileID: 4980900360532611917}
-  - component: {fileID: 1007975203971699856}
   m_Layer: 0
   m_Name: Cuerpo
   m_TagString: Untagged
@@ -1591,20 +1576,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &1007975203971699856
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4033707626809757400}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4240386940666886245
 GameObject:
   m_ObjectHideFlags: 0
@@ -3209,7 +3180,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8842093602735711277}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2.0140197
