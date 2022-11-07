@@ -36,7 +36,7 @@ public class PickUpObject : MonoBehaviour
                 PickedObject.transform.position = interactionZone.position;
                 PickedObject.GetComponent<Rigidbody>().useGravity = false;
                 PickedObject.GetComponent<Rigidbody>().isKinematic = true;
-                PickedObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+                PickedObject.GetComponentInChildren<MeshRenderer>().enabled = true;
                 //isPickable = false;
                
                 
