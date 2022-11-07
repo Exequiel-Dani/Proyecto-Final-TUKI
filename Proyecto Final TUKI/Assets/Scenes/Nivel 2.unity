@@ -55162,8 +55162,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1348791644}
   m_Layer: 6
+<<<<<<< HEAD
+  m_Name: mapa
+  m_TagString: Obstaculo
+=======
   m_Name: Mapa
   m_TagString: Untagged
+>>>>>>> main
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
