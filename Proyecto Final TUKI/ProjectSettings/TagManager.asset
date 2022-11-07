@@ -9,7 +9,6 @@ TagManager:
   - Bala
   - Llave
   - Premio
-  - Obstaculo
   layers:
   - Default
   - TransparentFX

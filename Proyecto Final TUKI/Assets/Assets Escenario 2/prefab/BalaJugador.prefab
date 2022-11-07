@@ -114,7 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86d761e25f756454db1ebd62a6002958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cantidad: 20
+  damage: 50
+  Enemigo: {fileID: 3803718126181400195, guid: 80bba868c1682c94280d63d249f013fe, type: 3}
 --- !u!65 &2099296361903401672
 BoxCollider:
   m_ObjectHideFlags: 0
