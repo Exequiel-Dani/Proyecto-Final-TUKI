@@ -9,14 +9,13 @@ public class DetectorPremio : MonoBehaviour
     public TextMeshProUGUI DetectaPremio;
     public GameObject Premio;
     public Transform ubicacionPremio;
-    //Spublic DetectorLlave detectorLlave;
-    //public PickUpObject pickUpObject;
+    public PickUpObject pickUpObject;
     public bool Activo;
     // Start is called before the first frame update
     void Start()
     {
         ubicacionPremio = GetComponentInParent<Transform>();
-        //pickUpObject = GetComponent<PickUpObject>();
+        pickUpObject = GetComponent<PickUpObject>();
         Premio = GameObject.Find("ContenedorPremio");//GetComponent<PickUpObject>().ObjectToPickUp;   
 
     }
@@ -26,12 +25,11 @@ public class DetectorPremio : MonoBehaviour
     {
         if (Activo == true)
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.G))
             {
-                //DetectaPremio.enabled = false;
-                DetectaPremio.gameObject.SetActive(false);
                 Debug.Log("Ganaste");
-                //Premio.transform.SetParent(ubicacionPremio);
+                DetectaPremio.enabled = false;
+                Premio.transform.SetParent(ubicacionPremio);
                 Premio.GetComponent<PickAbleObject>().isPickAble = false;
                 ganaste.enabled = true;
                 Activo = false;
@@ -48,7 +46,6 @@ public class DetectorPremio : MonoBehaviour
             Activo = true;
             
             DetectaPremio.enabled = true;
-            //Invoke("detectaPremio", 0.5f);
                 
             //activado = true;
             //InvokeRepeating("Disparar", 0, 1f);
@@ -63,10 +60,5 @@ public class DetectorPremio : MonoBehaviour
             DetectaPremio.enabled = false;
             Activo = false;
         }
-    }
-
-    public void detectaPremio()
-    {
-        DetectaPremio.enabled = false;
     }
 }

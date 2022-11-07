@@ -73,7 +73,7 @@ public class EnemyPatrol : MonoBehaviour
                 i = 0;
             }
             nuevaPosicion = new Vector3(puntosDeControl[i].position.x, enemigo.transform.position.y, puntosDeControl[i].position.z);
-            //Debug.Log(i);
+            Debug.Log(i);
         }
     }
     /*void moveEnemy()
